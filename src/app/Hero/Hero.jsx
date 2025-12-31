@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import style from "./Hero.module.css"
+import style from "./hero.module.css"
 import { useTheme } from '@mui/material/styles';
 import { ThemeContext } from '../../context/themebuttonContext';
 import { useTranslation } from 'react-i18next';
