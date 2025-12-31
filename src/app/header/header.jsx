@@ -73,11 +73,13 @@ export default function Header() {
         '--hover-border-li': theme.palette.wbsiteTheme.border.borderHeader,
         display: 'flex',
         alignItems: 'center',
-        gap: '8px'
+        gap: '8px',
+        
        }}
        key={value.id}>
         <a style={{color:theme.palette.wbsiteTheme.text.text4}} href={value.link}>{t(value.name)}</a>
-        <span style={{ color: theme.palette.wbsiteTheme.text.text17 }}>{value.icon}</span>
+        <span style={{ 
+          color: theme.palette.wbsiteTheme.text.text17 }}>{value.icon}</span>
        </li> 
        )
     })
@@ -88,7 +90,7 @@ export default function Header() {
       {/* reader */}
       <header
       style={{
-        backgroundColor: theme.palette.wbsiteTheme.background.headerBg,
+        backgroundColor: theme.palette.wbsiteTheme.background.default,
         borderColor: theme.palette.wbsiteTheme.border.borderHeader,
         '--hover-line': theme.palette.wbsiteTheme.text.text17,
         '--hover-text': theme.palette.wbsiteTheme.text.text1

@@ -139,6 +139,9 @@ header .Options {
    .headerMedia .navMedia li span{
     display: block;
    }
+   .headerMedia .navMedia li span svg{ 
+    font-size: 33px;
+    }
    .headerMedia .navMedia li:hover{
     background-color: var(--hover-bg-li, #1de9b61d);
     border-color: var(--hover-border-li, #1de9b6);

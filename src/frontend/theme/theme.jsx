@@ -27,7 +27,7 @@ export const getDesignTokens = (mode) => ({
             bg14: "#ddd",
             bg15: "#eee",
             bg16: "#fff",
-            headerBg: "#1de9b626",
+            headerBg: "#1de9b621",
           },
           text: {
                 text1: "#fff",
