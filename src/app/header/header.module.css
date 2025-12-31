@@ -1,0 +1,150 @@
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid;
+}
+
+header .iconNav{
+    display: none;
+}
+
+header .nav {
+    color: #fff;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+header li span{
+    display: none;
+}
+
+header .nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--hover-line, #1de9b6);
+    transition: width 0.3s ease;
+}
+
+header .nav a:hover {
+    color: var(--hover-text, #fff) !important;
+}
+
+header .nav a:hover::after {
+    width: 100%;
+}
+
+header .Options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.themeBtn {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.themeBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #1de9b6;
+    transform: rotate(15deg);
+}
+
+.Options :global(.MuiFormControl-root) {
+    margin: 0 !important;
+}
+
+.headerMedia {
+    display: none;
+}
+
+@media (max-width: 1030px) {
+    header .nav {
+        gap: 20px;
+    }
+    header .nav a {
+    font-size: 0.85rem;
+}
+}
+
+@media (max-width: 883px) {
+    .header{
+        padding: 10px 20px;
+    }
+    .header .iconNav{
+        display: flex;
+    }
+    .header .nav {
+        display: none;
+    }
+    .headerMedia {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: 100%;
+    }
+    .headerMedia .navMedia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        list-style: none;
+        padding: 10px 0;
+        gap: 20px;
+        text-align: left;
+        align-items: flex-start;
+     }   
+     .headerMedia .navMedia li{
+    border: 2px solid ;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+   }
+   .headerMedia .navMedia li span{
+    display: block;
+   }
+   .headerMedia .navMedia li:hover{
+    background-color: var(--hover-bg-li, #1de9b61d);
+    border-color: var(--hover-border-li, #1de9b6);
+   }
+
+    .headerMedia .navMedia li a{
+       font-size: 1rem;
+    }
+}
