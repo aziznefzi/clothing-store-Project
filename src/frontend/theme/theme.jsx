@@ -46,7 +46,8 @@ export const getDesignTokens = (mode) => ({
                 text14: "#222",
                 text15: "#111",
                 text16: "#000",
-                text17: "#1de9b6"
+                text17: "#1de9b6",
+                text18: "#fff"
               },
               border: {
                 borderHeader: "#0bffc277",
@@ -92,7 +93,7 @@ export const getDesignTokens = (mode) => ({
                text14: "#ddd",
                text15: "#eee",
                text16: "#fff",
-               text17: "#558b2f"
+               text17: "#558b2f",
               },
               border: {
                 borderHeader: "#0c5d4997",

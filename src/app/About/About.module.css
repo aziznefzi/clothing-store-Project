@@ -1,0 +1,349 @@
+.About{
+    padding: 20px 40px;
+}
+
+.About h4{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.About .AboutUsText{
+    text-align: center;
+}
+.lightModeH4 {
+    background: linear-gradient(175deg, #1A1A1A 0%, #558b2f 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.darkModeH4 {
+    background: linear-gradient(175deg, #fff 0%, #1de9b6 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.About .AboutContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 70px 0;
+}
+
+.About .OurAdvantages{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.About .OurAdvantages .OurAdvantagesItemLight,
+.About .OurAdvantages .OurAdvantagesItemDark{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:17px 20px;
+    border-radius: 25px;
+    border: 2px solid ;
+}
+
+.About .OurAdvantages .OurAdvantagesItemLight{
+    background: linear-gradient(77deg, #1A1A1A00 0%, #558b2f41 100%);
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark{
+    background: linear-gradient(77deg, #ffffff00 0%, #1de9b641 100%);
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark:hover,
+.About .OurAdvantages .OurAdvantagesItemLight:hover{
+    transform: translateY(-3px);
+}
+
+.About .OurAdvantages .OurAdvantagesItemLight:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark:hover{
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark h5,
+.About .OurAdvantages .OurAdvantagesItemLight h5{
+   font-size: 1.7rem;
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark svg,
+.About .OurAdvantages .OurAdvantagesItemLight svg{
+    font-size:2.4rem ;
+}
+
+.About .OurAdvantages button{
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    border: 3px solid #fff;
+    cursor: pointer;
+    transition: .5 all;
+}
+
+.About .OurAdvantages .BtntDark{
+    background: linear-gradient(225deg, #fff 0%, #1de9b6 50%, #fff 100%);
+    box-shadow: 0 0 20px rgba(29, 233, 182, 0.5);
+}
+
+.About .OurAdvantages .BtntLight{
+    background: linear-gradient(225deg, #2e2d2d 0%, #558b2f 50%, #2e2d2d 100%);
+    box-shadow: 0 5px 15px rgba(85, 139, 47, 0.4);
+}
+
+.About .OurAdvantages .BtntDark:hover{
+    background: linear-gradient(225deg, #1de9b6 0%, #fff 50%, #1de9b6 100%);
+    transform: translateY(-3px);
+}
+
+.About .OurAdvantages .BtntLight:hover{
+    background: linear-gradient(225deg, #558b2f 0%, #2e2d2d 50%, #558b2f 100%);
+    transform: translateY(-3px);
+}
+
+/* Image Container Styling */
+.About .ImgAbout {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.About .ImgAbout:hover {
+    transform: scale(1.02);
+}
+
+.About .ImgAbout img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Dynamic CSS Background behind the image */
+.About .ImgAbout::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: 1;
+    opacity: 0.6;
+    animation: pulseGlow 5s infinite alternate;
+}
+
+/* Light Mode Backround Style (Green/White concept adapted) */
+.About .ImgAboutLight::before {
+    background: radial-gradient(circle, #558b2f 0%, rgba(255,255,255,0.8) 70%, transparent 100%);
+    box-shadow: 0 0 60px rgba(85, 139, 47, 0.4);
+}
+
+/* Dark Mode Background Style (Teal/Dark concept adapted) */
+.About .ImgAboutDark::before {
+    background: radial-gradient(circle, #1de9b6 0%, rgba(29, 233, 182, 0.2) 70%, transparent 100%);
+    box-shadow: 0 0 60px rgba(29, 233, 182, 0.3);
+}
+
+/* Extra organic shape layer for "Style" */
+.About .ImgAbout::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: rotateBlob 20s linear infinite;
+}
+
+.About .ImgAboutLight::after {
+    background: linear-gradient(45deg, #558b2f, #ffffff);
+}
+
+.About .ImgAboutDark::after {
+    background: linear-gradient(45deg, #1de9b6, #004d40);
+}
+
+@keyframes pulseGlow {
+    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.7; }
+}
+
+@keyframes rotateBlob {
+    0% { transform: translate(-50%, -50%) rotate(0deg); border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    33% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    66% { border-radius: 30% 70% 40% 60% / 50% 60% 30% 70%; }
+    100% { transform: translate(-50%, -50%) rotate(360deg); border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+}
+
+@media(max-width: 1130px){
+    .About h4{
+        font-size: 2.7rem;
+    }
+.About .OurAdvantages .OurAdvantagesItemLight,
+.About .OurAdvantages .OurAdvantagesItemDark{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 12px;
+    border-radius: 25px;
+    border: 2px solid ;
+}
+.About .OurAdvantages .OurAdvantagesItemDark h5,
+.About .OurAdvantages .OurAdvantagesItemLight h5{
+   font-size: 1.3rem;
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark p,
+.About .OurAdvantages .OurAdvantagesItemLight p{
+    font-size: 1rem;
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark svg,
+.About .OurAdvantages .OurAdvantagesItemLight svg{
+    font-size:2rem ;
+}
+
+.About .ImgAbout::after {
+    width: 90%;
+    height: 90%;
+}
+
+.About .ImgAbout img {
+    width: 90%;
+    height: 90%;
+}
+
+.About .ImgAboutLight::before {
+    box-shadow: 0 0 35px rgba(85, 139, 47, 0.35);
+}
+
+/* Dark Mode Background Style (Teal/Dark concept adapted) */
+.About .ImgAboutDark::before {
+    box-shadow: 0 0 35px rgba(29, 233, 182, 0.25);
+}
+
+}
+
+@media(max-width: 935px){
+    .About h4{
+        font-size: 2.5rem;
+    }
+    .About .AboutContainer{
+        flex-direction: column;
+    }
+    .About .OurAdvantages{
+        margin-bottom: 60px;
+    }
+    .About .ImgAbout{
+        margin: 0 auto;
+        width: 350px;
+        height: 350px;
+    }
+    
+.About .ImgAboutLight::before {
+    box-shadow: 0 0 25px rgba(85, 139, 47, 0.3);
+}
+
+/* Dark Mode Background Style (Teal/Dark concept adapted) */
+.About .ImgAboutDark::before {
+    box-shadow: 0 0 25px rgba(29, 233, 182, 0.2);
+}
+}
+
+@media(max-width: 608px){
+.About .OurAdvantages .OurAdvantagesItemLight,
+.About .OurAdvantages .OurAdvantagesItemDark{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:8px 10px;
+    border-radius: 25px;
+    border: 2px solid ;
+}
+.About .OurAdvantages .OurAdvantagesItemDark h5,
+.About .OurAdvantages .OurAdvantagesItemLight h5{
+   font-size: 1.2rem;
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark p,
+.About .OurAdvantages .OurAdvantagesItemLight p{
+    font-size: .8rem;
+}
+
+.About .OurAdvantages .OurAdvantagesItemDark svg,
+.About .OurAdvantages .OurAdvantagesItemLight svg{
+    font-size:2rem ;
+}
+
+.About .OurAdvantages button{
+    font-size: 1rem;
+    padding: 6px 15px;
+    border-radius: 25px;
+    border: none;
+    border: 3px solid #fff;
+    cursor: pointer;
+    transition: .5 all;
+}
+.About .ImgAbout{
+    width: 280px;
+    height: 280px;
+}
+.About .ImgAbout::after {
+    width: 80%;
+    height: 80%;
+}
+
+.About .ImgAbout img {
+    width: 80%;
+    height: 80%;
+}
+.About .ImgAboutLight::before {
+    box-shadow: 0 0 15px rgba(85, 139, 47, 0.3);
+}
+
+/* Dark Mode Background Style (Teal/Dark concept adapted) */
+.About .ImgAboutDark::before {
+    box-shadow: 0 0 15px rgba(29, 233, 182, 0.2);
+}
+}
+
+@media(max-width: 500px){
+    .About{
+        padding: 20px 20px;
+    }
+    .About .ImgAbout{
+        width: 250px;
+        height: 250px;
+    }
+.About .ImgAboutLight::before {
+    box-shadow: 0 0 10px rgba(85, 139, 47, 0.2);
+}
+
+/* Dark Mode Background Style (Teal/Dark concept adapted) */
+.About .ImgAboutDark::before {
+    box-shadow: 0 0 10px rgba(29, 233, 182, 0.15);
+}
+}

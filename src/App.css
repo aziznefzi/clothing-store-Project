@@ -11,4 +11,9 @@
 body{
   background-color: #111;
   color: #fff;
+  overflow-x: hidden;
+}
+
+h4{
+  font-size: 3.2rem;
 }
