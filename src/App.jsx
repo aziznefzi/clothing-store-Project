@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState, useMemo } from 'react'
 import './App.css'
 
-{/* components project import */}
+/* components project import */
 import Header from './app/header/header';
 import Hero from './app/Hero/Hero';
 import About from './app/About/About';
@@ -9,22 +9,22 @@ import Collections from './app/collection/collection';
 import Offers from './app/offers/offers';
 import CloseUs from './app/CloseUs/CloseUs';
 import Testimonials from './app/testimonials/testimonials';
-{/* components project import */}
+/* components project import */
 
-{/* theme import */}
+/* theme import */
 import {getDesignTokens} from './frontend/theme/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ThemeContext } from './context/themebuttonContext';
 import CssBaseline from '@mui/material/CssBaseline'
-{/* theme import */}
+/* theme import */
 
-{/* i18n import */}
+/* i18n import */
 import { useTranslation } from 'react-i18next';
-{/* i18n import */}
+/* i18n import */
 
-{/* router router import */}
+/* router router import */
 import {Routes,Route} from 'react-router-dom'
-{/* router router import */}
+/* router router import */
 function App() {
   const {WebsiteTheme} = useContext(ThemeContext);
   const theme = useMemo(() => createTheme(getDesignTokens(WebsiteTheme)), [WebsiteTheme])
