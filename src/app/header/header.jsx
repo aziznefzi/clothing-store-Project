@@ -29,9 +29,10 @@ import Slide from '@mui/material/Slide';
 {/* icon import */}
 
 export default function Header() {
+    const [openNav, setOpenNav] = React.useState(false); 
     React.useEffect(() => {
-      // Language is handled by i18n.js init and changeLanguage handler
-    }, [])
+      document.body.style.overflow = openNav ? 'hidden' : 'auto';
+    }, [openNav])
   {/* Navigation Value */}
   const NavValue = [
     {id:1, icon:<HomeIcon fontSize="small"/>, name:"Hero",link:"/"},
@@ -53,7 +54,6 @@ export default function Header() {
   {/* theme context */}
   
   const [openLanguegeSelect, setOpenLanguegeSelect] = React.useState(false);
-  const [openNav, setOpenNav] = React.useState(false); 
   const changeLanguage = (e) => {
     const langValue = e.target.value;
     i18n.changeLanguage(langValue);
