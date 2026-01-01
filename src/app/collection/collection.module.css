@@ -243,6 +243,13 @@
 }
 }
 
+@media (max-width: 425px) {
+.collectionContainer .collectionImgDark img,
+.collectionContainer .collectionImg img{
+    max-width: 350px;
+ }
+}
+
 @media (max-width: 374px) {
 .collectionContainer .collectionImgDark img,
 .collectionContainer .collectionImg img{
