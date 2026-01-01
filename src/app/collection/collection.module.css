@@ -1,0 +1,201 @@
+.collectionContainer{
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.collectionContainer .collectionImg,
+.collectionContainer .collectionImgDark{
+    border-radius: 25px;
+}
+
+.collectionContainer .collectionImg{
+    box-shadow: 0 0 20px #0000007a;
+}
+
+.collectionContainer .collectionImgDark{
+    box-shadow: 0 0 20px #ffffff3e;
+} 
+
+.collectionContainer .collectionImgDark img,
+.collectionContainer .collectionImg img{
+    max-width: 550px;
+}
+
+.collectionContainer .collectionImg:hover,
+.collectionContainer .collectionImgDark:hover{
+    transform: scale(1.03);
+}
+
+.collectionContainer .collectionImg:hover{
+    box-shadow: 0 0 30px #00000065;
+}
+.collectionContainer .collectionImgDark:hover{
+  box-shadow: 0 0 20px #ffffff65;
+}
+
+.collectionContainer .collectionContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.collectionContainer .collectionContent h4{
+    background: linear-gradient(135deg, #1A1A1A 0%, #558b2f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.collectionContainer .collectionContent .h4Dark{
+    background: linear-gradient(135deg, #fff 0%, #1de9b6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+} 
+
+.collectionContainer .collectionContent p{
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+.collectionContainer .collectionContent .bands{
+    display: flex;
+    margin: 20px 0;
+    gap: 25px;
+}
+
+.collectionContainer .collectionContent .bands .brandWrapper {
+    width: 76px;
+    height: 76px;
+    padding: 15px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff 0%, #1de9b6 100%);
+    box-shadow: 0 0 10px #1de9b6;
+    transition: all 0.3s ease;
+}
+
+.collectionContainer .collectionContent .bands .brandWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.8s ease-in-out;
+}
+
+.collectionContainer .collectionContent .bands .brandWrapper:hover {
+    transform: translateY(-5px);
+}
+
+.collectionContainer .collectionContent .bands .brandWrapper:hover img {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.collectionContainer .collectionContent .bands .iconsBandsDark {
+    border-color: #1A1A1A;
+    background: linear-gradient(135deg, #1A1A1A 0%, #558b2f 100%);
+    box-shadow: 0 0 10px #558b2f;
+}
+
+.collectionContainer .collectionContent .bands .iconsBandsDark img {
+    filter: brightness(0) invert(1);
+}
+
+.collectionContainer .collectionContent button{
+    background: linear-gradient(135deg, #1A1A1A 0%, #558b2f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #0000007a;
+    cursor: pointer;
+}
+
+.collectionContainer .collectionContent .ButtonDark{
+    background: linear-gradient(3deg, #fff 20%, #1de9b6 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #1de9b6;
+}
+
+.collectionContainer .collectionContent button:hover,
+.collectionContainer .collectionContent .ButtonDark:hover {
+   background: linear-gradient(135deg, #1A1A1A 0%, #558b2f 100%);
+   -webkit-background-clip: initial;
+   background-clip: initial;
+   -webkit-text-fill-color: #fff;
+   color: #fff;
+   transform: scale(1.1);
+}
+
+.collectionContainer .collectionContent .ButtonDark:hover {
+    background: linear-gradient(135deg, #1de9b6 0%, #00bfa5 100%);
+    border-color: transparent;
+}
+
+@media (max-width: 780px) {
+.collectionContainer .collectionImgDark img,
+.collectionContainer .collectionImg img{
+    max-width: 450px;
+}
+
+.collectionContainer .collectionContent .h4Dark,
+.collectionContainer .collectionContent h4{
+    font-size: 2.5rem;
+}
+
+.collectionContainer .collectionContent p{
+    font-size: 1.1rem;
+}
+
+.collectionContainer .collectionContent .bands .brandWrapper {
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+}
+
+.collectionContainer .collectionContent .bands .brandWrapper img{
+
+}
+}
+
+@media (max-width: 600px) {
+.collectionContainer{
+    padding:0 30px;
+}
+.collectionContainer .collectionImgDark img,
+.collectionContainer .collectionImg img{
+    max-width: 350px;
+}
+
+.collectionContainer .collectionContent .h4Dark,
+.collectionContainer .collectionContent h4{
+    font-size: 2rem;
+}
+
+.collectionContainer .collectionContent p{
+    font-size: 1rem;
+}
+
+.collectionContainer .collectionContent .bands .brandWrapper {
+    width: 46px;
+    height: 46px;
+    padding: 6px;
+}
+}

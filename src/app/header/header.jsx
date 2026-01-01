@@ -31,7 +31,7 @@ import Slide from '@mui/material/Slide';
 export default function Header() {
     const [openNav, setOpenNav] = React.useState(false); 
     React.useEffect(() => {
-      document.body.style.overflow = openNav ? 'hidden' : 'auto';
+      document.body.style.overflowY = openNav ? 'hidden' : 'auto';
     }, [openNav])
   {/* Navigation Value */}
   const NavValue = [
@@ -222,4 +222,3 @@ export default function Header() {
     </>
   )
 }
- 
