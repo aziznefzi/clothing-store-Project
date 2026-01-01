@@ -242,3 +242,19 @@
     padding: 6px;
 }
 }
+
+@media (max-width: 374px) {
+.collectionContainer .collectionImgDark img,
+.collectionContainer .collectionImg img{
+    max-width: 250px;
+}
+
+.collectionContainer .collectionContent .h4Dark,
+.collectionContainer .collectionContent h4{
+    font-size: 1.5rem;
+}
+
+.collectionContainer .collectionContent p{
+    font-size: 0.9rem;
+}
+}
