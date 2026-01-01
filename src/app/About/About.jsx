@@ -41,7 +41,7 @@ export default function About() {
   return (
     <>
     {/* About */}
-    <div className={style.About}>
+    <div id="about" className={style.About}>
       <h4 className={WebsiteTheme === "dark" ? style.darkModeH4 : style.lightModeH4}>{t("AboutUs")}</h4>
       <p 
       style={{

@@ -10,7 +10,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <div className={`${style.hero} ${WebsiteTheme === 'light' ? 'light-mode' : ''}`}>
+    <div id="hero" className={`${style.hero} ${WebsiteTheme === 'light' ? 'light-mode' : ''}`}>
       <div className={style.bgContainer}>
         <div className={`${style.shape} ${style.shape1}`}></div>
         <div className={`${style.shape} ${style.shape2}`}></div>

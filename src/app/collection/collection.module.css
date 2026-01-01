@@ -6,6 +6,53 @@
     gap: 70px;
     padding: 50px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Background Animation */
+.collectionContainer::before,
+.collectionContainer::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    animation: drift 20s infinite alternate;
+}
+
+.collectionContainer[data-theme="light"]::before {
+    background: radial-gradient(circle, rgba(29, 233, 182, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -200px;
+    left: -200px;
+}
+
+.collectionContainer[data-theme="light"]::after {
+    background: radial-gradient(circle, rgba(85, 139, 47, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    bottom: -200px;
+    right: -200px;
+    animation-delay: -10s;
+}
+
+.collectionContainer[data-theme="dark"]::before {
+    background: radial-gradient(circle, rgba(29, 233, 182, 0.1) 0%, rgba(18, 18, 18, 0) 70%);
+    top: -200px;
+    left: -200px;
+}
+
+.collectionContainer[data-theme="dark"]::after {
+    background: radial-gradient(circle, rgba(85, 139, 47, 0.1) 0%, rgba(18, 18, 18, 0) 70%);
+    bottom: -200px;
+    right: -200px;
+    animation-delay: -10s;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
 }
 
 .collectionContainer .collectionImg,
@@ -14,11 +61,11 @@
 }
 
 .collectionContainer .collectionImg{
-    box-shadow: 0 0 20px #0000007a;
+    box-shadow: 0 0 20px #558b2f;
 }
 
 .collectionContainer .collectionImgDark{
-    box-shadow: 0 0 20px #ffffff3e;
+    box-shadow: 0 0 20px #1de9b6;
 } 
 
 .collectionContainer .collectionImgDark img,
@@ -32,10 +79,10 @@
 }
 
 .collectionContainer .collectionImg:hover{
-    box-shadow: 0 0 30px #00000065;
+    box-shadow: 0 0 30px #558b2f;
 }
 .collectionContainer .collectionImgDark:hover{
-  box-shadow: 0 0 20px #ffffff65;
+  box-shadow: 0 0 30px #1de9b6;
 }
 
 .collectionContainer .collectionContent {
@@ -119,7 +166,7 @@
     color: #fff;
     padding: 10px 20px;
     border-radius: 25px;
-    box-shadow: 0 0 10px #0000007a;
+    box-shadow: 0 0 10px #558b2f;
     cursor: pointer;
 }
 
@@ -169,15 +216,11 @@
     height: 56px;
     padding: 8px;
 }
-
-.collectionContainer .collectionContent .bands .brandWrapper img{
-
-}
 }
 
 @media (max-width: 600px) {
 .collectionContainer{
-    padding:0 30px;
+    padding:30px;
 }
 .collectionContainer .collectionImgDark img,
 .collectionContainer .collectionImg img{

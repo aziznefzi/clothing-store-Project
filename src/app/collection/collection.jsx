@@ -13,7 +13,7 @@ export default function Collection() {
   const theme = useTheme();
   const iconsBandsClassname = theme.palette.mode === 'light' ? style.iconsBandsDark : "";
   return (
-    <div className={style.collectionContainer}>
+    <div id="collections" className={style.collectionContainer} data-theme={theme.palette.mode}>
       <div className={theme.palette.mode === 'dark' ? style.collectionImgDark : style.collectionImg}>
       <img src={imgIcon} alt="" />
       </div>

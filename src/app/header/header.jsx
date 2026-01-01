@@ -35,14 +35,14 @@ export default function Header() {
     }, [openNav])
   {/* Navigation Value */}
   const NavValue = [
-    {id:1, icon:<HomeIcon fontSize="small"/>, name:"Hero",link:"/"},
-    {id:2, icon:<InfoIcon fontSize="small"/>, name:"About",link:"/about"},
-    {id:3, icon:<GridViewIcon fontSize="small"/>, name:"Collections",link:"/collections"},
-    {id:4, icon:<LocalOfferIcon fontSize="small"/>, name:"Offers",link:"/offers"},
-    {id:5, icon:<PlaceIcon fontSize="small"/>, name:"Close Us",link:"/close-us"},
-    {id:7, icon:<RateReviewIcon fontSize="small"/>, name:"Testimonials",link:"/testimonials"},
-    {id:6, icon:<EmailIcon fontSize="small"/>, name:"Contact",link:"/contact"},
-    {id:8, icon:<SegmentIcon fontSize="small"/>, name:"Footer",link:"/footer"},
+    {id:1, icon:<HomeIcon fontSize="small"/>, name:"Hero",link:"#hero"},
+    {id:2, icon:<InfoIcon fontSize="small"/>, name:"About",link:"#about"},
+    {id:3, icon:<GridViewIcon fontSize="small"/>, name:"Collections",link:"#collections"},
+    {id:4, icon:<LocalOfferIcon fontSize="small"/>, name:"Offers",link:"#offers"},
+    {id:5, icon:<PlaceIcon fontSize="small"/>, name:"Close Us",link:"#close-us"},
+    {id:7, icon:<RateReviewIcon fontSize="small"/>, name:"Testimonials",link:"#testimonials"},
+    {id:6, icon:<EmailIcon fontSize="small"/>, name:"Contact",link:"#contact"},
+    {id:8, icon:<SegmentIcon fontSize="small"/>, name:"Footer",link:"#footer"},
   ]
   
   {/* i18n hock */}
