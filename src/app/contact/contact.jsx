@@ -27,9 +27,9 @@ export default function contact() {
   {/* theme hock */}
 
   const ContactValue = [
-    {id:1, icon: <MailOutlineIcon />, title: "Email Us", text:"Eraa@Store.com"},
-    {id:2, icon: <LocalPhoneIcon />, title: "Call Us", text:"+216 20 222 333"},
-    {id:3, icon: <LocationOnIcon />, title: "Visit Us", text:"123 Ben Arous, Tunis, Tunisia"},
+    {id:1, icon: <MailOutlineIcon />, title: "EmailUs", text:"Eraa@Store.com"},
+    {id:2, icon: <LocalPhoneIcon />, title: "CallUs", text:"+216 20 222 333"},
+    {id:3, icon: <LocationOnIcon />, title: "VisitUs", text:"123 Ben Arous, Tunis, Tunisia"},
   ]
   return (
     <div id="contact" className={style.contactUs}>
@@ -52,7 +52,7 @@ export default function contact() {
               {item.icon}
             </div>
             <div className={style.cardContent}>
-              <h5 className={style.cardTitle}>{item.title}</h5>
+              <h5 className={style.cardTitle}>{t(item.title)}</h5>
               <p className={style.cardText} style={{ color: theme.palette.wbsiteTheme.text.text7 }}>{item.text}</p>
             </div>
           </div>

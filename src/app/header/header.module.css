@@ -119,6 +119,7 @@ header .Options {
     .headerMedia .navMedia{
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         width: 100%;
         list-style: none;
@@ -129,13 +130,19 @@ header .Options {
      }   
      .headerMedia .navMedia li{
     border: 2px solid ;
-    justify-content: space-between;
     padding: 10px;
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
+    margin: auto;
+    width: 70%;
    }
+
+   .headerMedia .navMedia li a{
+    display: flex;
+    justify-content: space-between;
+   }
+
    .headerMedia .navMedia li span{
     display: block;
    }
@@ -149,5 +156,20 @@ header .Options {
 
     .headerMedia .navMedia li a{
        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .headerMedia .navMedia li{
+    width: 80%;
+   }
+}
+
+@media (max-width: 470px) {
+    .headerMedia .navMedia li{
+    width: 100%;
+   }
+   .headerMedia .navMedia li span svg{ 
+    font-size: 25px;
     }
 }

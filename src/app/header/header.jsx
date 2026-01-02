@@ -69,15 +69,27 @@ export default function Header() {
        style={{
         '--hover-bg-li': theme.palette.wbsiteTheme.background.headerBg,
         '--hover-border-li': theme.palette.wbsiteTheme.border.borderHeader,
-        display: 'flex',
-        alignItems: 'center',
-        gap: '8px',
-        
        }}
        key={value.id}>
-        <a style={{color:theme.palette.wbsiteTheme.text.text4}} href={value.link}>{t(value.name)}</a>
-        <span style={{ 
-          color: theme.palette.wbsiteTheme.text.text17 }}>{value.icon}</span>
+        <a 
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            color:theme.palette.wbsiteTheme.text.text4,
+            width: '100%',
+            height: '100%'
+          }} 
+          href={value.link}
+          onClick={()=>setOpenNav(false)}
+        >
+          {t(value.name)}
+          <span style={{ 
+            color: theme.palette.wbsiteTheme.text.text17,
+            display: 'flex',
+            alignItems: 'center'
+          }}>{value.icon}</span>
+        </a>
        </li> 
        )
     })

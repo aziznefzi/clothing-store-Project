@@ -8,6 +8,7 @@ import About from './app/About/About';
 import Collections from './app/collection/collection';
 import Offers from './app/offers/offers';
 import Contact from './app/contact/contact';
+import Footer from './app/footer/footer';
 /* components project import */
 
 /* theme import */
@@ -54,6 +55,7 @@ function App() {
           <Collections />
           <Offers />
           <Contact />
+          <Footer />
           {/* App components */}
           </>
           } />
