@@ -1,0 +1,230 @@
+/* Main Section Container */
+.contactUs {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* To contain any background bleeds if added later */
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 700px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.titleLight {
+  background: linear-gradient(135deg, #1A1A1A 0%, #558b2f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titleDark {
+  background: linear-gradient(135deg, #ffffff 0%, #1de9b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Cards Container */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Card Styles */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Hover Effect: Lift up */
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Dark Mode Card */
+.cardDark {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(29, 233, 182, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardDark:hover {
+  box-shadow: 0 10px 40px rgba(29, 233, 182, 0.15);
+  border-color: rgba(29, 233, 182, 0.5);
+}
+
+/* Light Mode Card */
+.cardLight {
+  background: rgb(239, 239, 239);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(85, 139, 47, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.cardLight:hover {
+  box-shadow: 0 15px 40px rgba(85, 139, 47, 0.15);
+  border-color: rgba(85, 139, 47, 0.5);
+}
+
+/* Icon Wrapper */
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.iconWrapper svg {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Theme specific icon backgrounds */
+.cardDark .iconWrapper {
+  background: rgba(29, 233, 182, 0.1);
+  color: #1de9b6;
+}
+
+.cardLight .iconWrapper {
+  background: rgba(85, 139, 47, 0.1);
+  color: #558b2f;
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.1);
+}
+
+.cardDark:hover .iconWrapper {
+  background: rgba(29, 233, 182, 0.2);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(29, 233, 182, 0.4);
+}
+
+.cardLight:hover .iconWrapper {
+  background: rgba(85, 139, 47, 0.2);
+  color: #558b2f;
+}
+
+/* Card Content */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.cardDark .cardTitle {
+  color: #fff;
+}
+
+.cardLight .cardTitle {
+  color: #1A1A1A;
+}
+
+.cardText {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 1078px){
+    .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+} 
+
+@media (max-width: 768px) {
+  .contactUs {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+  
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 666px) {
+    .cardTitle {
+        font-size: 1.1rem;
+    }
+    .cardText {
+    width: 200px;
+}
+}
+
+@media (max-width: 450px) {
+.card {
+ padding:1.3rem 1rem;
+}
+.iconWrapper {
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.iconWrapper svg {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+}
+
+@media (max-width: 389px) {
+    .cardText {
+    width: 140px;
+}
+}

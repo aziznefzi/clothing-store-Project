@@ -7,8 +7,7 @@ import Hero from './app/Hero/Hero';
 import About from './app/About/About';
 import Collections from './app/collection/collection';
 import Offers from './app/offers/offers';
-import CloseUs from './app/CloseUs/CloseUs';
-import Testimonials from './app/testimonials/testimonials';
+import Contact from './app/contact/contact';
 /* components project import */
 
 /* theme import */
@@ -54,8 +53,7 @@ function App() {
           <About />
           <Collections />
           <Offers />
-          <CloseUs />
-          <Testimonials />
+          <Contact />
           {/* App components */}
           </>
           } />
