@@ -83,12 +83,21 @@ export default function Header() {
           href={value.link}
           onClick={()=>setOpenNav(false)}
         >
-          {t(value.name)}
+          {openNav === false ? (
           <span style={{ 
             color: theme.palette.wbsiteTheme.text.text17,
             display: 'flex',
             alignItems: 'center'
           }}>{value.icon}</span>
+          ) : null}
+          {t(value.name)}
+          {openNav === true ? (
+          <span style={{ 
+            color: theme.palette.wbsiteTheme.text.text17,
+            display: 'flex',
+            alignItems: 'center'
+          }}>{value.icon}</span>
+          ) : null}
         </a>
        </li> 
        )
